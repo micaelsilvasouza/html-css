@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 2</title>
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <style>
+        body{
+            text-align: center;
+            background-color: rgb(168, 196, 255);
+        }
+        div{
+            background-color: orange;
+            max-width: 800px;
+            margin: auto;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow:  0px 0px 5px rgba(1, 1, 51, 0.39);
+        }
+        h1{
+            background-color: rgb(2, 2, 119);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 3em;
+            padding: 10px;
+            margin: -10px -10px 0px -10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        p{
+            color: white;
+            font-size: 1.8em;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Desafio Imagens</h1>
+        <p>Logo abaixo temos uma imagem que se adapta conforme o tamanho da tela em que é exibida</p>
+        <picture>
+            <source media="(max-width: 600px)" srcset="imagens/github-m.png" type="image/png">
+            <source media="(max-width: 900px)" srcset="imagens/github-g.png" type="image/png">
+            <img src="imagens/github-gg.png" alt="github">
+        </picture>
+    </div>
+</body>
+</html>
