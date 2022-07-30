@@ -15,9 +15,19 @@
             border-collapse: collapse;
         }
 
+        caption{
+            font: bold 1em Arial;
+            background-color: gray;
+            padding: 10px;
+        }
+
         thead, tfoot{
             background-color: gray;
             color: white;
+        }
+
+        tbody > tr:nth-child(odd){
+            background-color: lightgray;
         }
 
         td, th{
@@ -31,6 +41,7 @@
     <!--
         ANATOMIAS PARA TABELAS GRANDES:
         TABLE
+            CAPION = LEGENDA OU TITULO
             THEAD
                 TR, TD, TH
             TBODY
@@ -40,30 +51,46 @@
     -->
 
     <table>
+        <caption>População das unidades federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Região</th>
+                <th scope="col" style="width: 50px;">População</th>
+                <th scope="col" style="width: 50px;">Percentual</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>São Paulo</td>
-                <td>46 919 049</td>
+                <td>Sudeste</td>
+                <td>81 565 983</td>
+                <td>42,06%</td>
             </tr>
             <tr>
-                <td>Minas Gerais</td>
-                <td>21 168 791</td>
+                <td>Nordeste</td>
+                <td>53 907 144</td>
+                <td>27,79%</td>
             </tr>
             <tr>
-                <td>Rio de Janeiro</td>
-                <td>17 264 943</td>
+                <td>Sul</td>
+                <td>27 731 644</td>
+                <td>14,30%</td>
+            </tr>
+            <tr>
+                <td>Norte</td>
+                <td>16 318 163</td>
+                <td>8,41%</td>
+            </tr>
+            <tr>
+                <td>Centro-oeste</td>
+                <td>14 423 952</td>
+                <td>7,44%</td>
             </tr>
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de habitantes</th>
-                <td>0000000000000000000</td>
+                <th scope="row">Brasil</th>
+                <td>193 946 886</td>
+                <td>100,00%</td>
             </tr>
         </tfoot>
     </table>
