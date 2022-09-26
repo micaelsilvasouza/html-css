@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+    <header>
+        <h1>Meu Site</h1>
+        <span id="burguer" class="material-symbols-outlined" onclick="ClickMenu()">menu</span>
+        <menu id="menu">
+            <ul>
+                <li><a href="#">Opção 1</a></li>
+                <li><a href="#">Opção 2</a></li>
+                <li><a href="#">Opção 3</a></li>
+                <li><a href="#">Opção 4</a></li>
+                <li><a href="#">Opção 5</a></li>
+            </ul>
+        </menu>
+    </header>
+    <main>
+        <article>
+            <h1>Testando Menu Responsivo</h1>
+            
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, facere soluta voluptatum itaque repudiandae eveniet magnam, voluptatem labore amet tenetur quidem? Ad illo magnam deleniti tempore architecto, dicta est atque? Lorem ipsum dolor sit amet consectetur adipisicing elit. A illo recusandae sapiente aut ullam quia ab fugit. Repudiandae eos mollitia libero iure error, placeat amet dicta ipsa facere vel voluptatem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, asperiores? Saepe, tenetur itaque nostrum numquam illum debitis sunt iusto cupiditate mollitia amet ab explicabo est vero, officiis corporis maxime autem.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, provident mollitia blanditiis voluptate adipisci error aperiam eum molestiae reiciendis amet consequuntur eos velit esse iste possimus nobis eveniet, officia ipsa? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe amet autem doloremque, architecto assumenda iure labore, inventore fugit tenetur ex in quidem voluptatem ipsa atque iusto nam soluta, quia dignissimos.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A nostrum quisquam eveniet, numquam accusantium iste porro fugiat, fugit molestiae reprehenderit aliquam blanditiis delectus atque sit praesentium possimus, voluptas et laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores ipsa alias neque ullam repellat nobis voluptatibus odio, dignissimos mollitia ipsam itaque eius velit ratione facere. Molestiae porro vel eveniet eum. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos fuga delectus autem voluptas? Harum, voluptates at natus consequuntur hic nulla, laudantium unde recusandae dignissimos incidunt nostrum reiciendis atque delectus quos?</p>
+        </article>
+    </main>
+    
+    <script>
+        let bool = true
+        function ClickMenu(){
+            if(bool){
+                menu.style.display = "block"
+                bool = false
+            }else{
+                menu.style.display = "none"
+                bool = true
+            }
+        }
+    </script>
+</body>
+</html>
