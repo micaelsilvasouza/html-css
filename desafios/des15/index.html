@@ -5,17 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="estilos/style.css">
 </head>
 <body>
     <main>
-        <section>
+        <section id="imagem"></section>
 
-        </section>
-        <section>
+        <section id="form">
             <h1>Login</h1>
             <p>Seja bem-vindo(a) novamente. Faça login pra acessar a sua conta e poder fazer as suas configurações em seu ambiente.</p>
             <form action="login.php" method="post" autocomplete="on">
-                
+                <div class="entrada">
+                    <label for="iemail">Email</label>
+                    <input type="email" name="email" id="iemail" required placeholder="seu e-mail">
+                </div>
+                <div class="entrada">
+                    <label for="isen">Senh</label>
+                    <input type="password" name="sen" id="isen" required placeholder="sua senha">
+                </div>
+                <div>
+                    <input id="entrar" type="submit" value="Entrar">
+                </div>
+                <div>
+                    <a href="nova-senha.html" target="_blank">Esqueci a senha</a>
+                </div>
             </form>
         </section>
     </main>
