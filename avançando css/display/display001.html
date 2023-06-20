@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display CSS</title>
+    <style>
+        span{
+            border: 1px solid;
+            font:1.5em sans-serif;
+        }
+
+        span:nth-child(1){
+            display: inline;
+            border-color: green;
+            background-color: greenyellow;
+        }
+        span:nth-child(2){
+            display: inline-block;
+            width: 300px;
+            padding: 10px;
+            margin: 15px;
+            border-color: red;
+            background-color: brown;
+        }
+        span:nth-child(3){
+            display: block;
+            width: 300px;
+            padding: 10px;
+            margin: 15px;
+            height: 300px;
+            text-align: center;
+            line-height: 300px;
+            border-color: blue;
+            background-color: lightskyblue;
+        }
+    </style>
+</head>
+<body>
+    <span>Estou em linha</span>
+    <span>Estou em bloco linha</span>
+    <span>Estou em bloco</span>
+</body>
+</html>
