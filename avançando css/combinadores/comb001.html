@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinadores CSS</title>
+    <style>
+        main{
+            background-color: azure;
+            padding: 10px;
+        }
+
+        main p{
+            font: bold 1.3em sans-serif;
+            background-color: rgb(241, 171, 113);
+            padding: 10px;
+        }
+
+        main > p{
+            font-family: monospace;
+            background-color: rgb(90, 90, 212);
+        }
+
+        article{
+            background-color: bisque;
+            padding: 10px;
+        }
+
+        article + p{
+            font-family: cursive;
+            background-color: brown;
+        }
+
+        article ~ p{
+            color: yellowgreen;
+        }
+
+        section{
+            background-image: linear-gradient(transparent, #1a5b);
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <p>
+            Filho direto do MAIN (main > p)... Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium autem quam repellendus molestiae consequuntur quos nam, beatae error, ipsum rerum laborum expedita explicabo ipsa magnam? Recusandae nesciunt ipsa est blanditiis?
+        </p>
+        <article>
+            <p>
+                Descendente do MAIN (main p)... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque architecto ex maxime consequatur blanditiis iure deserunt nulla voluptatibus, recusandae dolore repudiandae optio rem facere voluptate ipsum. Sit quos doloremque magni!
+            </p>
+        </article>
+
+        <p>
+            Irmaão adjacente de ARTICLE (article + p)... Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt obcaecati placeat consequatur at nulla amet, dolorem quos quis et consequuntur, ea animi? Doloribus eos iste expedita ipsa delectus aspernatur optio.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt obcaecati placeat consequatur at nulla amet, dolorem quos quis et consequuntur, ea animi? Doloribus eos iste expedita ipsa delectus aspernatur optio.
+        </p>
+
+        <section>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos quidem harum nisi quisquam impedit aspernatur est recusandae inventore, ullam illum dicta natus animi, alias suscipit sequi obcaecati iusto distinctio assumenda!</p>
+        </section>
+
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus pariatur corporis soluta eligendi ex minus optio magni expedita, nisi impedit asperiores distinctio non mollitia, amet laboriosam nesciunt voluptates. Dolorem, aut.</p>
+    </main>
+</body>
+</html>
