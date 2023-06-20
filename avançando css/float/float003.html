@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float CSS</title>
+    <style>
+        div{
+            padding: 10px;
+            border: 3px solid black;
+        }
+        .div1{
+            float: left;
+            width: 100px;
+            border-color: #73ad21;
+        }
+        .div2{
+            border-color: #ff00ff;
+        }
+        .div3{
+            float: left;
+            width: 100px;
+            border-color: #73ad21;
+        }
+        .div4{
+            border-color: #ff00ff;
+            clear: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sem Clear</h1>
+    <div class="div1">Div1</div>
+    <div class="div2">Div2, Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, iste! Ab vel nostrum et non totam! Consequuntur, dolores recusandae. Vel, deserunt impedit et earum explicabo blanditiis rerum consequuntur nobis corrupti!</div>
+    <h1>Com Clear</h1>
+    <div class="div3">Div3</div>
+    <div class="div4">Div4, Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod exercitationem cum repellendus, eum impedit similique, non cumque fugiat tenetur numquam delectus sequi aut hic accusantium quam autem at dolor! Et?</div>
+    
+    <p>O clear limpa a flutuação de um objeto não flutuante que está proximo do flutuante</p>
+</body>
+</html>

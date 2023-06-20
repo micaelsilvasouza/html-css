@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float CSS</title>
+    <style>
+        div.conteiner{
+            padding: 10px;
+            border: 2px solid #00a2f5;
+            overflow: auto;
+        }
+        div > div{
+            float: right;
+            font-size: 100px;
+        }
+        div > div:nth-child(1){
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <div>Nada</div>
+        <div>Lorem</div>  
+    </div>
+    <p>Adicionado o overflow em conteiner para ajustar o tamannho para caber o conteudo float, caso o conteiner não tenha tamannho definido</p>
+</body>
+</html>
