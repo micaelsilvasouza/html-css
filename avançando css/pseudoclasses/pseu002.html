@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoclasses CSS</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: #003fad;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        div{
+            font: bolder 1.2em sans-serif;
+            background-color: #f05f0e;
+            color: white;
+            width: 200px;
+            padding: 10px;
+            float: left;
+        }
+
+        div:first-child{
+            background-color: #ff033f;
+        }
+
+        div:first-child > p{
+            color: #0f3214;
+            font-size: 14px;
+        }
+
+        div p:first-child{
+            background-color: #42ce3d;
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid #0f3214;
+        }
+
+        ul{
+            list-style-type: none;
+            text-align: right;
+            padding: 10px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        li:first-child{
+            color: black;
+            background-color: #42ce3d;
+            border: 1px solid #0f3214;
+            border-radius: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            <ul>
+                <li>nada</li>
+                <li>Tudo</li>
+            </ul>
+            <ul>
+                <li>Nem</li>
+                <li>Fudendo</li>
+            </ul>
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus fugiat debitis, dolores in rerum ex doloremque, explicabo aspernatur vero deserunt reiciendis incidunt quibusdam magni sed harum! Voluptatibus amet aperiam rem?
+        </p>
+    </div>
+    <div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            <ul>
+                <li>nada</li>
+                <li>Tudo</li>
+            </ul>
+            <ul>
+                <li>Nem</li>
+                <li>Fudendo</li>
+            </ul>
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus fugiat debitis, dolores in rerum ex doloremque, explicabo aspernatur vero deserunt reiciendis incidunt quibusdam magni sed harum! Voluptatibus amet aperiam rem?
+        </p>
+    </div>
+    <div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            <ul>
+                <li>nada</li>
+                <li>Tudo</li>
+            </ul>
+            <ul>
+                <li>Nem</li>
+                <li>Fudendo</li>
+            </ul>
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus fugiat debitis, dolores in rerum ex doloremque, explicabo aspernatur vero deserunt reiciendis incidunt quibusdam magni sed harum! Voluptatibus amet aperiam rem?
+        </p>
+    </div>
+</body>
+</html>
