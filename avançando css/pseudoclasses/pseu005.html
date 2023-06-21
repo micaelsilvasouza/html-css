@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoclasses CSS</title>
+    <style>
+        ::-webkit-scrollbar{
+            width: 0px;
+        }
+
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: monospace;
+            color: white;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(#0f3af5, #00f3e5);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        div:nth-child(odd){
+            background-color: rebeccapurple;
+            padding: 10px;
+        }
+        div:nth-child(even){
+            background-color: orangered;
+            padding: 10px;
+        }
+
+        div:nth-child(odd) > p{
+            text-align: center;
+        }
+
+        div:nth-child(even) > p{
+            text-align: right;
+        }
+
+        p:nth-child(1){
+            background-color: crimson;
+            padding: 10px;
+            font-style: italic;
+        }
+        p:nth-child(2){
+            text-decoration: underline;
+            padding: 10px;
+            background-color: #1f358f;
+        }
+
+        p:nth-child(2n){
+            text-shadow: 3px 3px 5px #000000;
+        }
+        p:nth-child(1n+2){
+            color: black;
+            text-shadow: 3px 3px 5px #fff;
+        }
+        p:only-child{
+            background-color: #29d44e;
+            border-radius: 20px;
+            width: 150px;
+            margin: auto;
+        }
+
+        p:only-of-type{
+            line-height: 45px;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sequi deserunt sit veniam, quam alias fugit dicta, numquam ipsum nesciunt, dignissimos error magni quo voluptatum expedita consequuntur vitae repellendus reiciendis.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sequi deserunt sit veniam, quam alias fugit dicta, numquam ipsum nesciunt, dignissimos error magni quo voluptatum expedita consequuntur vitae repellendus reiciendis.</p>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sequi deserunt sit veniam, quam alias fugit dicta, numquam ipsum nesciunt, dignissimos error magni quo voluptatum expedita consequuntur vitae repellendus reiciendis.</p>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium expedita repudiandae dolore unde odio possimus deserunt nam dolores laborum? Maiores maxime reiciendis aut eos rem ex debitis saepe quisquam! Officia!</p>
+        </div>
+    </div>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sequi deserunt sit veniam, quam alias fugit dicta, numquam ipsum nesciunt, dignissimos error magni quo voluptatum expedita consequuntur vitae repellendus reiciendis.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sequi deserunt sit veniam, quam alias fugit dicta, numquam ipsum nesciunt, dignissimos error magni quo voluptatum expedita consequuntur vitae repellendus reiciendis.</p>
+    </div>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sequi deserunt sit veniam, quam alias fugit dicta, numquam ipsum nesciunt, dignissimos error magni quo voluptatum expedita consequuntur vitae repellendus reiciendis.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sequi deserunt sit veniam, quam alias fugit dicta, numquam ipsum nesciunt, dignissimos error magni quo voluptatum expedita consequuntur vitae repellendus reiciendis.</p>
+    </div>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sequi deserunt sit veniam, quam alias fugit dicta, numquam ipsum nesciunt, dignissimos error magni quo voluptatum expedita consequuntur vitae repellendus reiciendis.</p>
+    </div>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sequi deserunt sit veniam, quam alias fugit dicta, numquam ipsum nesciunt, dignissimos error magni quo voluptatum expedita consequuntur vitae repellendus reiciendis.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sequi deserunt sit veniam, quam alias fugit dicta, numquam ipsum nesciunt, dignissimos error magni quo voluptatum expedita consequuntur vitae repellendus reiciendis.</p>
+    </div>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sequi deserunt sit veniam, quam alias fugit dicta, numquam ipsum nesciunt, dignissimos error magni quo voluptatum expedita consequuntur vitae repellendus reiciendis.</p>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sequi deserunt sit veniam, quam alias fugit dicta, numquam ipsum nesciunt, dignissimos error magni quo voluptatum expedita consequuntur vitae repellendus reiciendis.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sequi deserunt sit veniam, quam alias fugit dicta, numquam ipsum nesciunt, dignissimos error magni quo voluptatum expedita consequuntur vitae repellendus reiciendis.</p>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoclasses CSS</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background-image: linear-gradient(#0f3af5, #0ef5e3);
+            height: 100vh;
+            
+        }
+
+        q:lang(pt-br){
+            display: block;
+            quotes: "!""!";
+            background-color: rgb(151, 74, 228);
+            color:white;
+            padding: 10px;
+        }
+
+        p{
+            padding: 10px;
+        }
+
+        p:lang(no){
+            background-color: rgb(223, 55, 55);
+            color: white;
+            padding: 50px;
+            quotes: "b" "a";
+        }
+
+        
+    </style>
+</head>
+<body>
+    
+    <p>Lorem ipsum dolor <q lang="pt-br">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos sunt, velit laboriosam ad commodi vero laudantium omnis odio tempora, repellendus quam nesciunt, quaerat aspernatur sit labore reiciendis voluptas eos quo.</q></p>
+    <p lang="no">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi dolor nesciunt esse quod porro a provident ad neque quidem ipsam, voluptatum quam nam delectus nemo. Modi voluptatum saepe odit libero.</p>
+    
+</body>
+</html>
