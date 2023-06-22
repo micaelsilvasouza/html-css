@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoclasses CSS</title>
+    <style>
+        ::-webkit-scrollbar{
+            width: 0px;
+        }
+
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: monospace;
+            color: black;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(#0f3af5, #00f3e5);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        div{
+            position: absolute;
+            width: 100vw;
+            bottom: 30px;
+        }
+
+        input[type="range"]{
+            display: block;
+            width: 80%;
+            margin: auto;
+        }
+        section{
+            background-color:white;
+            width: 80vw;
+            height: 60vw;
+            margin: auto;
+        }
+        
+        input:in-range + section{
+            background-color: #0f1;
+        }
+
+        input:out-of-range + section{
+            background-color: #d10;
+        }
+    </style>
+</head>
+<body>
+    
+    <div><input type="range" oninput="number.value= this.value" min="0" max="100" value="50"></div>
+    <input id="number" type="number" max="75" min="25" value="50">
+    <section></section>
+</body>
+</html>
