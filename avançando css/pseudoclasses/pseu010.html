@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoclasses CSS</title>
+    <style>
+        ::-webkit-scrollbar{
+            width: 0px;
+        }
+
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: monospace;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(#0f3af5, #00f3e5);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        header{
+            padding: 20px ;
+            text-align: center;
+            background-color: rebeccapurple;
+        }
+
+        header > a{
+            font: small-caps bold 1.2em sans-serif;
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        header > a:hover{
+            background-color: #f03ae5;
+        }
+
+        main{
+            width: 80vw;
+            max-width: 1000px;
+            padding: 10px;
+            margin: auto;
+            background-color: rgb(255, 255, 255);
+            color: black;
+        }
+
+        main > span{
+            display: block;
+            text-align: center;
+            text-decoration: underline;
+            font: oblique  2em;
+            font-style: oblique;
+
+        }
+
+        main > article{
+            background-color: rebeccapurple;
+            padding: 10px;
+            margin-top: 15px;
+            display: none;
+            
+        }
+
+        main > article:target{
+            display: block;
+            background-color: white;
+            transition-duration: .5s;
+        }
+
+        main  h1{
+            font: bolder 25px verdana;
+            text-align: center;
+            padding-bottom: 15px;
+        }
+
+        main p{
+            font: 400 1.2em;
+            text-align: justify;
+            text-indent: 20px;
+            margin-bottom: 10px;
+        }
+
+        main ul{
+            text-align: justify;
+            margin-left: 50px;
+            list-style-position: outside;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#p1">Ponto 1</a>
+        <a href="#p2">Ponto 2</a>
+        <a href="#p3">Ponto 3</a>
+        <a href="#p4">Ponto 4</a>
+    </header>
+
+    <main>
+        <span>Selecione um ponto acima</span>
+        <article id="p1">
+            <h1>Ponto 1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit officiis aliquid aspernatur quisquam libero magnam officia exercitationem nisi voluptate dolorem totam quod, alias perspiciatis pariatur animi mollitia quas eaque quae.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit officiis aliquid aspernatur quisquam libero magnam officia exercitationem nisi voluptate dolorem totam quod, alias perspiciatis pariatur animi mollitia quas eaque quae.</p>
+        </article>
+        <article id="p2">
+            <h1>Ponto 2</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In maxime commodi pariatur ipsam cum quisquam. Omnis voluptatem, recusandae nostrum illum animi quo temporibus rem possimus voluptates architecto cum soluta excepturi! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus omnis nemo quos dignissimos, facilis consequatur, tempore, fugiat a porro numquam dolorum ipsa dolorem. Harum beatae dignissimos ut suscipit ab ducimus.</p>
+        </article>
+        <article id="p3">
+            <h1>Ponto 3</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ex rem sit quaerat est quidem iure officiis a facere soluta molestiae molestias maxime laudantium blanditiis, nulla rerum, amet placeat dolorum?</p>
+            <ul>
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint doloribus earum, nostrum numquam ad repellendus iste esse. Ex consequuntur esse, dolores quaerat quisquam facere iure ratione, quidem id magnam est?</li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint doloribus earum, nostrum numquam ad repellendus iste esse. Ex consequuntur esse, dolores quaerat quisquam facere iure ratione, quidem id magnam est?</li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint doloribus earum, nostrum numquam ad repellendus iste esse. Ex consequuntur esse, dolores quaerat quisquam facere iure ratione, quidem id magnam est?</li>
+            </ul>
+        </article>
+
+        <article id="p4">
+            <h1>Ponto 4</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio repudiandae numquam maiores sit quas est fuga magnam, soluta, excepturi quos suscipit. Repudiandae nisi veniam incidunt quae eaque! Cumque, obcaecati eius?</p>
+        </article>
+    </main>
+</body>
+</html>

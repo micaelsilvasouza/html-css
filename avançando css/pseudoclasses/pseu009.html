@@ -41,7 +41,7 @@
             color: black;
         }
         input[type="text"]:read-only{
-            background-color: #e99b09;
+            background-color: #fc1f1f;
         }
         input[type="text"]:read-write{
             background-color: #10d341;
@@ -99,10 +99,10 @@
         let read = document.getElementById("read")
         function ativarDesativar(){
             if(bot.checked){
-                read.setAttribute("read-only", "true")
+                read.readOnly = true
                 read.placeholder = "Não é possivel digitar ative o botão"
             }else{
-                read.setAttribute("read-only", "false")
+                read.readOnly = false
                 read.placeholder = "Agora pode digitar"
             }
         }
