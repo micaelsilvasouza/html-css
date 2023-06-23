@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoclasses CSS</title>
+    <style>
+        ::-webkit-scrollbar{
+            width: 0px;
+        }
+
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: monospace;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(#0f3af5, #00f3e5);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        main{
+            width: 90vw;
+            max-width: 800px;
+            margin: auto;
+            padding: 10px;
+            color: white;
+        }
+
+        p{
+            background-color: #0a8eff;
+            padding: 10px;
+            text-align: center;
+            margin: 15px;
+            border-radius: 30%;
+            outline: 5px solid white;
+        }
+
+        p.bf::before{
+            display: inline-block;
+            content: "ADICIONADO";
+            background-color: #f3a83a;
+            color: #0f3af5;
+            width: 150px;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid white;
+            border-radius: 20px;
+            transition-duration: .5s;
+        }
+        p.af::after{
+            display: inline-block;
+            content: "ADICIONADO";
+            background-color: #a3f543;
+            color: #0f3af5;
+            width: 150px;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid white;
+            border-radius: 20px;
+            transition-duration: .5s;
+        }
+
+        p.bf:hover::before, p.af:hover::after{
+            background-color: #af35e9;
+            color: white;
+        }
+
+        ul, ol{
+            text-align: center;
+            list-style-position: inside;
+            background-color: #af35e9;
+            border: 1px solid white;
+            border-radius: 100px;
+            padding: 10px;
+            margin-bottom: 5px;
+        }
+
+        ::marker{
+            color: #fa7b14;
+            font-size: 20px;
+        }
+
+        li:hover::marker{
+            color: #13f4a8;
+            font-size: 25px;
+        }
+
+        ::selection{
+            background-color: #fa7b14;
+            color: #0f3af5;
+            cursor: grab;
+            outline: 1px solid white;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <p class="bf">Antes</p>
+        <p class="af">Depois</p>
+        <p>
+            MINHA LISTA COM MARCADORES PERSONALIZADOS
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+            </ul>
+            <ol>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+            </ol>
+        </p>
+    </main>
+</body>
+</html>

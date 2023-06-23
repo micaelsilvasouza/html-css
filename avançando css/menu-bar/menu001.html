@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opacidade</title>
+    <style>
+        ::-webkit-scrollbar{
+            width: 0px;
+        }
+
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        body{
+            width: 100vw;
+            height: 100vh;
+            background: white;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        header{
+            background-color: #f1a355;
+        }
+
+        header > h1{
+            color: white;
+            padding: 10px;
+            font: small-caps 2.5em impact;
+            text-align: center;
+        }
+        a{
+            display: inline-block;
+            text-decoration: none;
+            font: 400 1.3em sans-serif;
+            color: white;
+            padding: 10px;
+        }
+
+        nav.menu-hori > a:last-child{
+            float: right;
+            color: #e6e4e4;
+        }
+
+        nav.menu-hori > a:hover{
+            background-color: #a135;
+        }
+        nav.menu-hori > a:active{
+            background-color: #f13513;
+        }
+        nav.menu-hori > a:active{
+            background-color: #f20;
+        }
+
+        main{
+            display: flex;
+            justify-content: right;
+            font: 300 25px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: black;
+            text-align: justify;
+        }
+
+        main h1{
+            font-size: 2em;
+            text-align: center;
+            padding: 10px 0px;
+        }
+
+        main > section{
+            max-width: 800px;
+            padding: 10px;
+            margin-left: 15px;
+        }
+
+        main > nav{
+            padding: 5px;
+            border-right: 2px solid black;
+            text-align: left;
+            min-width: 100px;
+        }
+
+        main > nav > a{
+            color: black;
+            display: block;
+            font: 100 1.2em;
+        }
+        main > nav > a:hover{
+            background-color: gray;
+        }
+
+        main article{
+            display: none;
+        }
+
+        main article:target{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Menu Horizontal</h1>
+        <nav class="menu-hori">
+            <a href="#casa">Casa</a>
+            <a href="#noti">Notícias</a>
+            <a href="#cont">Contatos</a>
+            <a href="#sobre">Sobre</a>
+        </nav>
+        
+    </header>
+    <main>
+        <nav>
+            <a href="#">Parte 1</a>
+            <a href="#">Parte 2</a>
+            <a href="#">Parte 3</a>
+            <a href="#">Parte 4</a>
+        </nav>
+        <section>
+            <p>Site para demonstrar uma barra de menu. Para fazer aparecer o conteudo com lorem basta clicar em algum botão no <menu></menu></p>
+            <article id="casa">
+                <h1>Casa</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus maiores aliquam saepe cumque iusto voluptates in? Saepe omnis voluptatibus debitis nemo, non eius. Non, soluta esse vero facere nihil est!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At sit recusandae dolor, iure, facilis, fugit cumque minima doloremque animi nisi magnam libero facere ratione praesentium? Consequuntur numquam sed ullam tenetur?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus maiores aliquam saepe cumque iusto voluptates in? Saepe omnis voluptatibus debitis nemo, non eius. Non, soluta esse vero facere nihil est!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At sit recusandae dolor, iure, facilis, fugit cumque minima doloremque animi nisi magnam libero facere ratione praesentium? Consequuntur numquam sed ullam tenetur?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus maiores aliquam saepe cumque iusto voluptates in? Saepe omnis voluptatibus debitis nemo, non eius. Non, soluta esse vero facere nihil est!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At sit recusandae dolor, iure, facilis, fugit cumque minima doloremque animi nisi magnam libero facere ratione praesentium? Consequuntur numquam sed ullam tenetur?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus maiores aliquam saepe cumque iusto voluptates in? Saepe omnis voluptatibus debitis nemo, non eius. Non, soluta esse vero facere nihil est!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At sit recusandae dolor, iure, facilis, fugit cumque minima doloremque animi nisi magnam libero facere ratione praesentium? Consequuntur numquam sed ullam tenetur?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus maiores aliquam saepe cumque iusto voluptates in? Saepe omnis voluptatibus debitis nemo, non eius. Non, soluta esse vero facere nihil est!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At sit recusandae dolor, iure, facilis, fugit cumque minima doloremque animi nisi magnam libero facere ratione praesentium? Consequuntur numquam sed ullam tenetur?</p>
+            </article>
+            <article id="noti">
+                <h1>Notícias</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus maiores aliquam saepe cumque iusto voluptates in? Saepe omnis voluptatibus debitis nemo, non eius. Non, soluta esse vero facere nihil est!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At sit recusandae dolor, iure, facilis, fugit cumque minima doloremque animi nisi magnam libero facere ratione praesentium? Consequuntur numquam sed ullam tenetur?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus maiores aliquam saepe cumque iusto voluptates in? Saepe omnis voluptatibus debitis nemo, non eius. Non, soluta esse vero facere nihil est!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At sit recusandae dolor, iure, facilis, fugit cumque minima doloremque animi nisi magnam libero facere ratione praesentium? Consequuntur numquam sed ullam tenetur?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus maiores aliquam saepe cumque iusto voluptates in? Saepe omnis voluptatibus debitis nemo, non eius. Non, soluta esse vero facere nihil est!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At sit recusandae dolor, iure, facilis, fugit cumque minima doloremque animi nisi magnam libero facere ratione praesentium? Consequuntur numquam sed ullam tenetur?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus maiores aliquam saepe cumque iusto voluptates in? Saepe omnis voluptatibus debitis nemo, non eius. Non, soluta esse vero facere nihil est!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At sit recusandae dolor, iure, facilis, fugit cumque minima doloremque animi nisi magnam libero facere ratione praesentium? Consequuntur numquam sed ullam tenetur?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus maiores aliquam saepe cumque iusto voluptates in? Saepe omnis voluptatibus debitis nemo, non eius. Non, soluta esse vero facere nihil est!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At sit recusandae dolor, iure, facilis, fugit cumque minima doloremque animi nisi magnam libero facere ratione praesentium? Consequuntur numquam sed ullam tenetur?</p>
+            </article>
+            <article id="cont">
+                <h1>Contatos</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus maiores aliquam saepe cumque iusto voluptates in? Saepe omnis voluptatibus debitis nemo, non eius. Non, soluta esse vero facere nihil est!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At sit recusandae dolor, iure, facilis, fugit cumque minima doloremque animi nisi magnam libero facere ratione praesentium? Consequuntur numquam sed ullam tenetur?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus maiores aliquam saepe cumque iusto voluptates in? Saepe omnis voluptatibus debitis nemo, non eius. Non, soluta esse vero facere nihil est!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At sit recusandae dolor, iure, facilis, fugit cumque minima doloremque animi nisi magnam libero facere ratione praesentium? Consequuntur numquam sed ullam tenetur?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus maiores aliquam saepe cumque iusto voluptates in? Saepe omnis voluptatibus debitis nemo, non eius. Non, soluta esse vero facere nihil est!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At sit recusandae dolor, iure, facilis, fugit cumque minima doloremque animi nisi magnam libero facere ratione praesentium? Consequuntur numquam sed ullam tenetur?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus maiores aliquam saepe cumque iusto voluptates in? Saepe omnis voluptatibus debitis nemo, non eius. Non, soluta esse vero facere nihil est!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At sit recusandae dolor, iure, facilis, fugit cumque minima doloremque animi nisi magnam libero facere ratione praesentium? Consequuntur numquam sed ullam tenetur?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus maiores aliquam saepe cumque iusto voluptates in? Saepe omnis voluptatibus debitis nemo, non eius. Non, soluta esse vero facere nihil est!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At sit recusandae dolor, iure, facilis, fugit cumque minima doloremque animi nisi magnam libero facere ratione praesentium? Consequuntur numquam sed ullam tenetur?</p>
+            </article>
+            <article id="sobre">
+                <h1>Sobre</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus maiores aliquam saepe cumque iusto voluptates in? Saepe omnis voluptatibus debitis nemo, non eius. Non, soluta esse vero facere nihil est!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At sit recusandae dolor, iure, facilis, fugit cumque minima doloremque animi nisi magnam libero facere ratione praesentium? Consequuntur numquam sed ullam tenetur?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus maiores aliquam saepe cumque iusto voluptates in? Saepe omnis voluptatibus debitis nemo, non eius. Non, soluta esse vero facere nihil est!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At sit recusandae dolor, iure, facilis, fugit cumque minima doloremque animi nisi magnam libero facere ratione praesentium? Consequuntur numquam sed ullam tenetur?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus maiores aliquam saepe cumque iusto voluptates in? Saepe omnis voluptatibus debitis nemo, non eius. Non, soluta esse vero facere nihil est!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At sit recusandae dolor, iure, facilis, fugit cumque minima doloremque animi nisi magnam libero facere ratione praesentium? Consequuntur numquam sed ullam tenetur?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus maiores aliquam saepe cumque iusto voluptates in? Saepe omnis voluptatibus debitis nemo, non eius. Non, soluta esse vero facere nihil est!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At sit recusandae dolor, iure, facilis, fugit cumque minima doloremque animi nisi magnam libero facere ratione praesentium? Consequuntur numquam sed ullam tenetur?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus maiores aliquam saepe cumque iusto voluptates in? Saepe omnis voluptatibus debitis nemo, non eius. Non, soluta esse vero facere nihil est!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At sit recusandae dolor, iure, facilis, fugit cumque minima doloremque animi nisi magnam libero facere ratione praesentium? Consequuntur numquam sed ullam tenetur?</p>
+            </article>
+            <article>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus maiores aliquam saepe cumque iusto voluptates in? Saepe omnis voluptatibus debitis nemo, non eius. Non, soluta esse vero facere nihil est!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At sit recusandae dolor, iure, facilis, fugit cumque minima doloremque animi nisi magnam libero facere ratione praesentium? Consequuntur numquam sed ullam tenetur?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus maiores aliquam saepe cumque iusto voluptates in? Saepe omnis voluptatibus debitis nemo, non eius. Non, soluta esse vero facere nihil est!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At sit recusandae dolor, iure, facilis, fugit cumque minima doloremque animi nisi magnam libero facere ratione praesentium? Consequuntur numquam sed ullam tenetur?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus maiores aliquam saepe cumque iusto voluptates in? Saepe omnis voluptatibus debitis nemo, non eius. Non, soluta esse vero facere nihil est!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At sit recusandae dolor, iure, facilis, fugit cumque minima doloremque animi nisi magnam libero facere ratione praesentium? Consequuntur numquam sed ullam tenetur?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus maiores aliquam saepe cumque iusto voluptates in? Saepe omnis voluptatibus debitis nemo, non eius. Non, soluta esse vero facere nihil est!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At sit recusandae dolor, iure, facilis, fugit cumque minima doloremque animi nisi magnam libero facere ratione praesentium? Consequuntur numquam sed ullam tenetur?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus maiores aliquam saepe cumque iusto voluptates in? Saepe omnis voluptatibus debitis nemo, non eius. Non, soluta esse vero facere nihil est!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At sit recusandae dolor, iure, facilis, fugit cumque minima doloremque animi nisi magnam libero facere ratione praesentium? Consequuntur numquam sed ullam tenetur?</p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

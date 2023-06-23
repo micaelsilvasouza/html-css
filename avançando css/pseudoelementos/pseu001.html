@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoclasses CSS</title>
+    <style>
+        ::-webkit-scrollbar{
+            width: 0px;
+        }
+
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: monospace;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(#0f3af5, #00f3e5);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        main{
+            width: 90vw;
+            max-width: 800px;
+            margin: auto;
+            padding: 10px;
+        }
+
+        p{
+            color: white;
+            text-align: justify;
+            padding: 5px;
+            background-color: #fa35a5;
+            margin-bottom: 15px;
+        }
+
+        p::first-line{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: xx-large;
+            text-decoration: underline;
+            color: bisque;
+        }
+
+        p::first-letter{
+            background-color: #0aa51a;
+            font-size: 2em;
+            padding: 3px 8px;
+            font-style: italic;
+            float: left;
+            border-radius: 50%;
+        }
+
+        p:nth-child(odd){
+            background-color: #0aa51a;
+        }
+
+        p:nth-child(odd)::first-letter{
+            background-color: #fa35a5;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates mollitia facilis, debitis officia iure, tempora corporis qui natus ut amet consequuntur aliquid tenetur excepturi doloribus quidem voluptas assumenda porro consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium incidunt alias corrupti molestiae veritatis ea debitis. Quia similique quasi assumenda ipsum? Nemo tempora fugit enim temporibus praesentium. Nobis, officiis doloribus.</p>
+        <p>çLorem ipsum dolor sit amet consectetur adipisicing elit. Tempore repellat doloremque eum laboriosam, fuga nam quibusdam error, temporibus aliquid quam cumque, earum dicta hic nesciunt impedit dolores maiores accusamus tempora!</p>
+        <p>abcdefghijklmnopqrstuvwxyz Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis beatae odit eligendi fugiat officia delectus cupiditate, perferendis saepe dolorem, nobis sint optio sequi. Assumenda unde obcaecati, nam optio porro quibusdam?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates mollitia facilis, debitis officia iure, tempora corporis qui natus ut amet consequuntur aliquid tenetur excepturi doloribus quidem voluptas assumenda porro consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium incidunt alias corrupti molestiae veritatis ea debitis. Quia similique quasi assumenda ipsum? Nemo tempora fugit enim temporibus praesentium. Nobis, officiis doloribus.</p>
+        <p>çLorem ipsum dolor sit amet consectetur adipisicing elit. Tempore repellat doloremque eum laboriosam, fuga nam quibusdam error, temporibus aliquid quam cumque, earum dicta hic nesciunt impedit dolores maiores accusamus tempora!</p>
+        <p>abcdefghijklmnopqrstuvwxyz Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis beatae odit eligendi fugiat officia delectus cupiditate, perferendis saepe dolorem, nobis sint optio sequi. Assumenda unde obcaecati, nam optio porro quibusdam?</p>
+    </main>
+</body>
+</html>
