@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itens Suspensos</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-image: linear-gradient(to right,#1af5f3, #f2a587);
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+        header span{
+            display: block;
+            color: white;
+            font-size: 20px;
+            padding: 10px;
+            background-color: #01a2ff63;
+            width: fit-content;
+            margin: 5px 16px;
+            border-radius: 10px;
+            box-shadow: 1px 3px 5px #00000071;
+        }
+
+        header nav{
+            display: none;
+            background-color: #ddd;
+            position: absolute;
+            z-index: 1;
+            box-shadow: 1px 1px 3px #00000071;
+            left: 15px;
+        }
+
+        header button{
+            display: block;
+            background-color: transparent;
+            border: none;
+            width: 100%;
+            padding: 5px 9px;
+            text-align: center;
+            color: #333;
+            font-size: 1.1em;
+            font-weight: 400;
+        }
+
+        header button:hover{
+            background-color: #999;
+            color: white;
+        }
+
+        header:hover nav{
+            display: block;
+        }
+
+        main{
+            position: absolute;
+            background-color: #f003f05d;
+            color: white;
+            width: 300px;
+            padding: 200px 50px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 50px;
+        }
+
+        main nav{
+            padding: 10px;
+            font: bolder 20px sans-serif;
+            cursor: pointer;
+            position: relative;
+            text-align: center;
+            font-size: 2em;
+        }
+
+        main nav div{
+            display:none;
+            background-color: white;
+            color: rgb(54, 54, 54);
+            padding: 10px;
+            position:absolute;
+            box-shadow: 3px 4px 7px #00000071;
+            z-index: 1;
+        }
+
+        main nav:hover div{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span>menu</span>
+        <nav>    
+            <button>Home</button>
+            <button>Novidades</button>
+            <button>Dia</button>
+        </nav>
+    </header>
+    <main>
+        <nav>
+            Passe o mouse
+            <div>texto Suspenso</div>
+        </nav>
+    </main>
+</body>
+</html>
