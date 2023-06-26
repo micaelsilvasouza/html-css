@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Html</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(to right,#f10035, #a313f5);
+        }
+
+        svg{
+            /*
+            Tem a preferencia
+            width: 100px;
+            height: 100px;*/
+            display: block;
+            background-color: rgba(255, 255, 255, 0.418);
+            margin: auto;
+        }
+
+        polygon{
+            fill: #a313f5;
+            stroke-width:3;
+            stroke: #f10035;
+        }
+    </style>
+</head>
+<body>
+    <svg width="300" height="300px">
+        <polygon points="75,10 225,10 290,75 290,225 225,290 75,290 10,225 10,75" fill="yellow">
+            Infelizmente seu navegador não suporta a tag svg
+        </polygon>
+    </svg>
+</body>
+</html>

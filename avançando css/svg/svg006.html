@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Html</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(to right,#f10035, #a313f5);
+        }
+
+        svg{
+            /*
+            Tem a preferencia
+            width: 100px;
+            height: 100px;*/
+            display: block;
+            background-color: rgba(255, 255, 255, 0.418);
+            margin: auto;
+        }
+
+        polyline{
+            stroke-width:3;
+            stroke: rgb(0, 0, 0);
+            fill: none;
+        }
+    </style>
+</head>
+<body>
+    <svg width="300" height="300px">
+        <polyline points="
+            10,150 
+            70,150 
+            120,100 
+            220,100 
+            290,130 
+            290,190
+            280,190
+            270,200
+            260,200
+            10,190 
+            10,150
+        ">
+            Infelizmente seu navegador não suporta a tag svg
+        </polyline>
+    </svg>
+</body>
+</html>
