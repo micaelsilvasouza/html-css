@@ -12,7 +12,7 @@
         body{
             width: 100vw;
             height: 100vh;
-            background: linear-gradient(to right,#f10035, #a313f5);
+            background: linear-gradient(to right,#0ac78e, #3902ce);
         }
 
         svg{
@@ -24,25 +24,16 @@
             background-color: rgba(255, 255, 255, 0.418);
             margin: auto;
         }
-
-        polyline{
-            stroke-width:3;
-            stroke: rgb(0, 0, 0);
-            fill: none;
-        }
     </style>
 </head>
 <body>
     <svg width="300" height="300px">
-        <polyline points="
-            10,30
-            300,122
-            154,0
-            230,154
-            100,300
-        ">
-            Infelizmente seu navegador não suporta a tag svg
-        </polyline>
+        <defs>
+            <filter id="f1">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10"/>
+            </filter>
+        </defs>
+        <rect width="250" height="250" fill="#03a5ff" x="25" y="25" filter="url(#f1)"/>
     </svg>
 </body>
 </html>

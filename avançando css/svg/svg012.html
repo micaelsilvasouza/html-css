@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Html</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(to right,#0ac78e, #3902ce);
+        }
+
+        svg{
+            /*
+            Tem a preferencia
+            width: 100px;
+            height: 100px;*/
+            display: block;
+            background-color: rgba(255, 255, 255, 0.418);
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <svg width="300" height="300px">
+        <defs>
+            <filter id="f1" x="0" y="0" width="200%" height="200%">
+                <feOffset in="SourceGraphic" result="offOut" dx="20" dy="20"/>
+                <feBlend in="SourceGraphic" in2="offOut" mode="normal"/>
+            </filter>
+
+            <filter id="f2" x="0" y="0" width="200%" height="200%">
+                <feOffset in="SourceGraphic" result="offOut" dx="20" dy="20"/>
+                <feGaussianBlur in="offOut" result="blurOut" stdDeviation="10"/>
+                <feBlend in="SourceGraphic" in2="blurOut" mode="normal"/>
+            </filter>
+
+            <filter id="f3" x="0" y="0" width="200%" height="200%">
+                <feOffset in="SourceAlpha" result="offOut" dx="20" dy="20"/>
+                <feGaussianBlur in="offOut" result="blurOut" stdDeviation="10"/>
+                <feBlend in="SourceGraphic" in2="blurOut" mode="normal"/>
+            </filter>
+
+            <filter id="f4" x="0" y="0" width="200%" height="200%">
+                <feOffset in="SourceGraphic" result="offOut" dx="20" dy="20"/>
+                <feColorMatrix in="offOut" result="matrixOut" type="matrix" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0"/>
+                <feGaussianBlur in="matrixOut" result="blurOut" stdDeviation="10"/>
+                <feBlend in="SourceGraphic" in2="blurOut" mode="normal"/>
+            </filter>
+        </defs>
+
+        <rect width="80" height="80" stroke-width="4" stroke="#a202f5" fill="#03a5ff" x="10" y="10" filter="url(#f1)"/>
+
+        <rect width="80" height="80" stroke-width="4" stroke="#a202f5" fill="#03a5ff" x="150" y="10" filter="url(#f2)"/>
+
+        <rect width="80" height="80" stroke-width="4" stroke="#a202f5" fill="#03a5ff" x="10" y="160" filter="url(#f3)"/>
+
+        <rect width="80" height="80" stroke-width="4" stroke="#a202f5" fill="#03a5ff" x="150" y="160" filter="url(#f4)"/>
+    </svg>
+</body>
+</html>

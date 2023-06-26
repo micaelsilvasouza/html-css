@@ -12,7 +12,7 @@
         body{
             width: 100vw;
             height: 100vh;
-            background: linear-gradient(to right,#f10035, #a313f5);
+            background: linear-gradient(to right,#d9f100, #0dd8ac);
         }
 
         svg{
@@ -25,24 +25,28 @@
             margin: auto;
         }
 
-        polyline{
-            stroke-width:3;
-            stroke: rgb(0, 0, 0);
-            fill: none;
+        text{
+            font: bolder 3em sans-serif
+        }
+
+        .c1{
+            stop-color: #f235ae;
+        }
+
+        .c2{
+            stop-color: #a354fa;
         }
     </style>
 </head>
 <body>
     <svg width="300" height="300px">
-        <polyline points="
-            10,30
-            300,122
-            154,0
-            230,154
-            100,300
-        ">
-            Infelizmente seu navegador não suporta a tag svg
-        </polyline>
+        <defs>
+            <linearGradient id="grad1" x1="0%" x2="100%" y1="0%" y2="100%">
+                <stop offset="0%" class="c1"/>
+                <stop offset="100%" class="c2"/>
+            </linearGradient>
+        </defs>
+        <ellipse cx="150" cy="150" ry="70" rx="120" fill="url(#grad1)"/>
     </svg>
 </body>
 </html>
