@@ -26,11 +26,11 @@
         }
 
         .c1{
-            stop-color: #f235ae;
+            stop-color: #f7eef4;
         }
 
         .c2{
-            stop-color: #54cbfa;
+            stop-color: #0010f7;
             
         }
     </style>
@@ -38,13 +38,17 @@
 <body>
     <svg width="300" height="300px">
         <defs>
-            <linearGradient id="grad1" x1="0%" x2="100%" y1="0%" y2="0%">
+            <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fy="50%" fx="50%">
                 <stop offset="0%" class="c1"/>
                 <stop offset="100%" class="c2"/>
-            </linearGradient>
+            </radialGradient>
+            <radialGradient id="grad2" cx="30%" cy="40%" r="30%" fy="10%" fx="30%">
+                <stop offset="0%" class="c1"/>
+                <stop offset="100%" class="c2"/>
+            </radialGradient>
         </defs>
-        <ellipse cx="150" cy="150" ry="70" rx="120" fill="url(#grad1)"/>
-        <text fill="white" font-family="verdana" font-size="60" x="85" y="170">SVG</text>
+        <ellipse cx="150" cy="80" ry="50" rx="100" fill="url(#grad1)"/>
+        <ellipse cx="150" cy="200" ry="50" rx="100" fill="url(#grad2)"/>
     </svg>
 </body>
 </html>
