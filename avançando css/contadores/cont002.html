@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contadores</title>
+    <style>
+        body{
+            counter-reset: seção;
+        }
+
+        h1{
+            counter-reset: subseção;
+        }
+
+        h1::before{
+            counter-increment: seção;
+            content: "TITULO " counter(seção)">>>>";
+        }
+
+        h2::before{
+            counter-increment: subseção;
+            content: "SUBTITULO " counter(seção)"." counter(subseção) ">>>>";
+        }
+    </style>
+</head>
+<body>
+    <h1></h1>
+    <h2></h2>
+    <h2></h2>
+
+    <h1></h1>
+    <h2></h2>
+    <h2></h2>
+    <h2></h2>
+
+    <h1></h1>
+    <h2></h2>
+    <h2></h2>
+    <h2></h2>
+    <h2></h2>
+
+    <h1></h1>
+    <h2></h2>
+    <h2></h2>
+    <h2></h2>
+    
+</body>
+</html>

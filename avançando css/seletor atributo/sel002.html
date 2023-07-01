@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: linear-gradient(#5a33f2, #01a35f) fixed;
+        }
+
+        main{
+            display: flex;
+            position: absolute;
+            align-items: center;
+            justify-content: center;
+            top: 150px;
+        }
+
+        div{
+            padding: 50px;
+            background-color: #f14a33;
+            color: white;
+            text-align: center;
+            border: 1px solid white;
+            box-sizing: border-box;
+        }
+
+        div[class|="top"]{
+            font-size: 2em;
+            padding-top: 0px;
+            background-color: #1af5ff;
+        }
+
+        div[class^="bottom"]{
+            background-color: #a30af5;
+            padding-bottom: 0px;
+            padding-top: 100px;
+        }
+
+        div[class$="text"]{
+            text-align: right;
+            padding-right: 0px;
+        }
+
+        div[class*="n"]{
+            border-radius: 10px;
+            font-size: 30px;
+            font-family:monospace;
+            font-weight: bolder;
+            text-shadow: 1px 2px 5px #00000076;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="normal">Normal</div>
+        <div class="top-text">top-text</div>
+        <div class="bottom-text">bottom-text</div>
+        <div class="right-text">right-text</div>
+    </main>
+</body>
+</html>

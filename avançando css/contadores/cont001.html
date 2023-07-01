@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contadores</title>
+    <style>
+        body{
+            counter-reset: paragrafo;
+        }
+
+        p::before{
+            display: block;
+            counter-increment: paragrafo;
+            content: "Paragrafo " counter(paragrafo) " - ";
+            text-decoration: underline;
+            font-size: 1.5em;
+            font-family: monospace;
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contadores</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta error tempora reprehenderit ratione molestias saepe qui fugiat, minus atque provident voluptatem eveniet perferendis eum voluptate sequi deserunt, beatae, porro eos!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta error tempora reprehenderit ratione molestias saepe qui fugiat, minus atque provident voluptatem eveniet perferendis eum voluptate sequi deserunt, beatae, porro eos!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta error tempora reprehenderit ratione molestias saepe qui fugiat, minus atque provident voluptatem eveniet perferendis eum voluptate sequi deserunt, beatae, porro eos!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta error tempora reprehenderit ratione molestias saepe qui fugiat, minus atque provident voluptatem eveniet perferendis eum voluptate sequi deserunt, beatae, porro eos!</p>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: linear-gradient(#5a33f2, #01a35f) fixed;
+        }
+
+        main{
+            display: flex;
+            position: absolute;
+            align-items: center;
+            justify-content: center;
+            top: 150px;
+            left: 150px;
+        }
+
+        a{
+            text-decoration:none ;
+            color: white;
+            background-color: #f350ff;
+            padding: 10px;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+
+        a:hover{
+           background-color: red; 
+        }
+
+        a[target="_self"]:hover{
+            background-color: yellow;
+        }
+
+        a[target="_blank"]:hover{
+            background-color: blue;
+        }
+
+        a[title~="ir"]:hover{
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <a href="#" title="ir para">Sem Target</a>
+        <a href="#" target="_self" title="para ir">Target Self</a>
+        <a href="#" target="_blank" title="bara ir fora">Target black</a>
+    </main>
+</body>
+</html>
