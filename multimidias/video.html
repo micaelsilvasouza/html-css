@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+    <style>
+        body{
+            background-color: #00a3e4;
+            color: white;
+            
+        }
+
+        h1{
+            font: bolder 2.5em sans-serif;
+            text-align: center;
+        }
+
+        p{
+            font: bold 1.5em sans-serif;
+            text-align: center;
+        }
+
+        video{
+            margin: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Video</h1>
+    <p>O autoplay do video funcina melhor se estiver com o atributo muted</p>
+    <video width="320px" height="240px" controls muted autoplay>
+        <source src="../modulo4/ex26/imagens/eusoumesmo.mp4" type="video/mp4">
+        <!--Adicinar mais source para mais formatos opcionais de video-->
+        Seu navegador não possui suporte a video mp4
+    </video>
+</body>
+</html>

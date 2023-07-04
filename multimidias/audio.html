@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio</title>
+    <style>
+        body{
+            background-color: #00a3e4;
+            color: white;
+            
+        }
+
+        h1{
+            font: bolder 2.5em sans-serif;
+            text-align: center;
+        }
+
+        p{
+            font: bold 1.5em sans-serif;
+            text-align: center;
+        }
+
+        div{
+            padding: 0;
+            padding-top: 300px;
+            background-image: url(../desafios/des07/imagens/paisagem-p.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: 300px;
+            margin: auto;
+            text-align: center;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Auido</h1>
+    <p>O autoplay do audio funcina melhor se estiver com o atributo muted</p>
+    <div>
+        <audio controls >
+            <source src="audio/backsound.mp3" type="audio/mp3">
+            <!--Adicinar mais source para mais formatos opcionais de video-->
+            Seu navegador não possui suporte a video mp4
+        </audio>
+    </div>
+</body>
+</html>
