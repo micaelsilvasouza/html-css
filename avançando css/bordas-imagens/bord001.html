@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens de borda</title>
+    <style>
+        div{
+            width: 200px;
+            padding: 10px;
+            border: 40px solid black;
+            box-sizing: border-box;
+            text-align: center;
+            margin: 10px;
+            float: left;
+        }
+
+        div:nth-child(1){
+            border-image: url(border.png) 30 round;
+        }
+
+        div:nth-child(2){
+            border-image: url(border.png) 30 stretch;
+        }
+        div:nth-child(3){
+            border-image: url(border.png);
+        }
+        div:nth-child(4){
+            border-image: url(../../desafios/des03/imagens/mapa01.png) 30 round;
+        }
+        div:nth-child(5){
+            border-image: url(../../modulo3/ex22/imagens/target001.png) 30;
+        }
+        div:nth-child(6){
+            border-image: url(../../modulo4/ex26/imagens/icon-pc.png) 60 stretch;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Uma imagen repetida ao redor</p>
+    </div>
+    <div>
+        <p>Uma imagem esticada na parte do centro</p>
+    </div>
+    <div>
+        <p>Sem fatiamento e arredondamento</p>
+    </div>
+    <div>
+        <p>Usando uma imagem qualquer</p>
+    </div>
+    <div>
+        <p>Usando uma imagem qualquer</p>
+    </div>
+    <div>
+        <p>Usando uma imagem qualquer</p>
+    </div>
+</body>
+</html>
