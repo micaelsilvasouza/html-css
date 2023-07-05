@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Funções Matemáticas</title>
+    <style>
+        *{
+            margin:0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        h1{
+            padding: 10px;
+        }
+
+        main{
+            background-color: #00aff1;
+            width: calc(100% - 100px);
+            padding: 10px;
+        }
+
+        section{
+            width: calc(100%/2);
+            background-color: #a103f5;
+            padding: 10px;
+        }
+
+        article{
+            background-color: #eae538;
+            width: calc(20% * 2);
+            padding: 10px;
+        }
+        div{
+            background-color: #5ae538;
+            width: calc(20% * 3 + 50px);
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>calc()</h1>
+    <main>
+        <p>100% da viewport - 100px</p>
+        <section>
+            <p>Metade do tamanho de main</p>
+            
+        </section>
+        <article>
+            <p>20% vezes 2 </p>
+        </article>
+        <div>
+            <p>20% vezes 3 mais 50px</p>
+        </div>
+    </main>
+</body>
+</html>
