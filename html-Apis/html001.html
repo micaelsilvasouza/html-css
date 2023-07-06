@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocalização</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+
+        td,th{
+            border: 2px solid black;
+            padding: 10px 12px;
+        }
+    </style>
+</head>
+<body>
+    <p>Click no botão para ver sua localização</p>
+    <button onclick="localizcao()">Ver localização</button>
+    <p id="mostrar"></p>
+
+    <table>
+        <tbody>
+            <thead>
+                <th>Propredade</th>
+                <th>Retornos</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>coods.latitude</td>
+                    <td>A latitude como um número decimal (sempre retornado)</td>
+                </tr>
+                <tr>
+                    <td>coods.longitude</td>
+                    <td>A longitude como um número decimal (sempre retornado)</td>
+                </tr>
+                <tr>
+                    <td>coods.accuracy</td>
+                    <td>A precisão da posição (sempre retornada)</td>
+                </tr>
+                <tr>
+                    <td>coods.altitude</td>
+                    <td>A altitude em metros acima do nível médio do mar (retornada se disponível)</td>
+                </tr>
+                <tr>
+                    <td>coods.altitudeAccuracy</td>
+                    <td>A precisão de altitude da posição (retornada se disponível)</td>
+                </tr>
+                <tr>
+                    <td>coods.heading</td>
+                    <td>A velocidade em metros por segundo (retornada se disponível)</td>
+                </tr>
+                <tr>
+                    <td>timestamp</td>
+                    <td>A data/hora da resposta (retornada, se disponível)</td>
+                </tr>
+
+                <tr>
+                    <th>Metodo</th>
+                    <th>Descrição</th>
+                </tr>
+                <tr>
+                    <td>watchPosition()</td>
+                    <td>Retorna a posição atual do usuário e continua a retornar a posição atualizada à medida que o usuário se move (como o GPS em um carro).</td>
+                </tr>
+                <tr>
+                    <td>clearWatch()</td>
+                    <td>Interrompe o método.watchPosition()</td>
+                </tr>
+                <tr>
+                    <td>getCurrentPosition()</td>
+                    <td>Retorna um objeto de coordenadas para uma especificada no parametro</td>
+                </tr>
+            </tbody>
+        </tbody>
+    </table>
+
+    <script>
+        let mostrar = document.getElementById("mostrar")
+        mostrar.innerHTML = "Sua Localização: <br>"
+
+        function localizcao(){
+            if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(mostrarLocaizacao, mostrarError)
+            }else{
+                mostrar.innerHTML += "Seu navegador não tem suporte a geolocalizção!"
+            }
+        }
+
+        function mostrarLocaizacao(position){
+            mostrar.innerHTML += "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude + "<br>" + position.timestamp
+        }
+
+        function mostrarError(error){
+            switch (error.code) {
+                case error.PERMISSION_DENIED:
+                    mostrar.innerHTML += "Usuário negou o pedido de Geolocalização."
+                    break;
+                case error.POSITION_UNAVAIABLE:
+                    mostrar.innerHTML += "As informações de localização não estão disponíveis."
+                    break;
+                case error.TIMEOUT:
+                    mostrar.innerHTML += "A solicitação para obter a localização do usuário expirou."
+                    break
+                case error.UNKNOWK_ERROR:
+                    mostrar.innerHTML += "Ocorreu um erro desconhecido."
+                    break
+                default:
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
