@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armazenamento na Web</title>
+    <style>
+        div#test1{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Armazenamento na Web</h1>
+    <p>Com o armazenamento da Web, os aplicativos da Web podem armazenar dados localmente no navegador do usuário. Ao contrário dos cookies, o limite de armazenamento é muito maior (pelo menos 5MB) e as informações nunca são transferido para o servidor.</p>
+
+    <p>Seu navegador <span id="soun"></span></p>
+    <div id="test1">
+        <h1>Salvar dado</h1>
+        <label for="nome">Nome do dado</label>
+        <input type="text" id="nome" value="Nome">
+        <br>
+        <label for="valor">Valor do dado</label>
+        <input type="text" id="valor" value="Valor">
+        <br>
+        <input type="button" value="Salvar" onclick="salvar()">
+        <p>Acessando o dado salvo com o nome de 
+            <input type="text" id="dado" value="Nome" size="10" oninput="ver()">
+            temos o valor <strong id="mostrar">Valor</strong>
+        </p>
+    </div>
+
+    <script>
+        if(typeof(Storage) !== "undefined"){
+            document.getElementById("soun").innerHTML = "possui suporte ao Armazenamento Web"
+            
+            document.getElementById("test1").style.display = "block"
+
+        }else{
+            document.getElementById("soun").innerHTML = "não possui suporte ao Armazenamento Web"
+        }
+
+        function salvar(){
+            let nome = document.getElementById("nome").value
+            let valor = document.getElementById("valor").value
+            localStorage.setItem(nome,valor)
+            alert("Dado salvo com sucesso")
+        }
+
+        function ver(){
+            let dado = localStorage.getItem(document.getElementById("dado").value)
+            if(dado !== null){
+                document.getElementById("mostrar").innerHTML = dado
+            }else{
+                document.getElementById("mostrar").innerHTML = "indefinido"
+            }
+        }
+    </script>
+</body>
+</html>

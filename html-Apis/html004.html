@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armazenamento Web</title>
+    <style>
+        button{
+            background-color: rebeccapurple;
+            width: 100px;
+            padding: 10px;
+            border-radius: 10px;
+            color: white;
+            font: bolder 1em verdana;
+            text-align: center;
+            border: none;
+        }
+
+        button:hover{
+            background-color: #aa5af5;
+        }
+
+        button:active{
+            background-color: #5a2f5f;
+        }
+    </style>
+
+
+
+</head>
+<body>
+    <h1>Session Storage</h1>
+    <p>O objeto sessionStorage é igual ao objeto localStorage, exceto que ele armazena os dados para apenas uma sessão. Os dados são excluídos quando o usuário fecha o guia específica do navegador.</p>
+    <span id="men"></span>
+    <section>
+        <button onmouseover="over()" onclick="clicar()">
+            Click e Passe o Mouse
+        </button>
+        <p>Quantidade de clicks: <span id="click">0</span></p>
+        <p>Quantidade de passes: <span id="over">0</span></p>
+    </section>
+    
+    <script>
+    if(typeof(Storage) !== "undefined"){
+        document.getElementById("men").innerHTML = "Contando os Clicks e Passadas de mouse"
+        sessionStorage.clicks = 0
+        sessionStorage.overs = 0
+    }else{
+        document.getElementById("men").innerHTML = "Seu navegador não tem suporte ao Armazenamento Web"
+        document.querySelector("section").style.display = "none"
+    }
+
+    function clicar(){
+        sessionStorage.clicks = Number(sessionStorage.clicks) + 1
+        document.getElementById("click").innerHTML = sessionStorage.clicks
+    }
+
+    function over(){
+        sessionStorage.overs = Number(sessionStorage.overs) + 1
+
+        document.getElementById("over").innerHTML = sessionStorage.overs
+    }
+</script>
+</body>
+</html>
