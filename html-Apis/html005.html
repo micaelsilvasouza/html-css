@@ -8,33 +8,12 @@
 <body>
     <h1>Web Worker</h1>
     <p>Ao executar scripts em uma página HTML, a página deixa de responder até que o script seja concluído.</p>
+
     <p>Um web worker é um JavaScript executado em segundo plano, independentemente de outros scripts, sem afetar o desempenho da página. Você pode continuar a fazer o que quiser: clicando, selecionando coisas, etc., enquanto o web worker é executado em segundo plano.</p>
-    <p>Ele execulta um arquivo externo, para isso crie um arquivo por fora e adicone ele ao criar um worker</p>
 
-    <p>Segundos contados: <output id="resltado">0</output></p>
-    <button onclick="iniciarContagem()">Iniciar Worker</button>
-    <button onclick="pararContagem()">Terminar Worker</button>
+    <button id="sum">Sumar</button>
+    <button id="fundo">Trocar background</button>
 
-    <script>
-        var w
-
-        function iniciarContagem() {
-            if(typeof(Worker) !== "undefined"){
-                if(typeof(w) == "undefined"){
-                    w = new Worker("../demo.js")
-                }
-                w.onmessage  = function(event){
-                    document.getElementById("resutado").innerHTML = event.data
-                }
-            }else{
-                document.getElementById("resultado").innerHTML = "Infelizente seu navegador não possui suporte ao Web Workers"
-            }
-        }
-
-        function pararContagem() {
-            w.terminate()
-            w = undefined
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
