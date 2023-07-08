@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradiente</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body{
+            background-image: Linear-gradient(#af23f5,#f12a5b,#ceb006);
+            
+            width: 100vw;
+            height: 100vh;
+        }
+
+        h1{
+            font-size: 3em;
+            font-family: monospace;
+            font-weight: bolder;
+            color: white;
+            text-align: center;
+        }
+
+        div{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            margin: 10px;
+        }
+
+        #grad1{
+            background-image: radial-gradient(closest-side at 76% 25%, red, yellow, black);
+        }
+        #grad2{
+            background-image: radial-gradient(farthest-side at 76% 25%, red, yellow, black);
+        }
+        #grad3{
+            background-image: radial-gradient(closest-corner at 76% 25%, red, yellow, black);
+        }
+        #grad4{
+            background-image: radial-gradient(farthest-corner at 76% 25%, red, yellow, black);
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1>Radial Gradiente</h1>
+    <div id="grad1"></div>
+    <div id="grad2"></div>
+    <div id="grad3"></div>
+    <div id="grad4"></div>
+</body>
+</html>
