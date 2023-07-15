@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efeitos de texto</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+
+        p{
+            width: 200px;
+            padding: 10px;
+            box-shadow: 1px 2px 5px #666;
+            margin: auto;
+            margin-bottom: 10px;
+            overflow: hidden;
+            text-align: justify;
+        }
+
+        p:nth-of-type(2){
+            white-space: nowrap;
+            text-overflow: clip;
+        }
+        p:nth-of-type(3){
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        p:nth-of-type(4){
+            word-wrap: break-word;
+        }
+        p:nth-of-type(5){
+            word-break: keep-all;
+        }
+        p:nth-of-type(6){
+            word-break: break-all;
+        }
+        p:nth-of-type(8){
+            writing-mode: horizontal-tb;
+            width: 100px;
+        }
+        p:nth-of-type(9){
+            writing-mode: vertical-lr;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Text Overflow</h1>
+    <p>Esse text é muito grande, por isso é cortado quando usa white-space: nowrap</p>
+    <p>Esse text é muito grande, por isso é cortado quando usa white-space: nowrap</p>
+    <p>Esse text é muito grande, por isso é cortado quando usa white-space: nowrap</p>
+
+    <h1>Word Wrap</h1>
+    <p>Quando uma palavra é muito longa como essa: PNEUMOUTRAMICROSCOPICOSSILICOVULCANOCONIÓTICO, elas são normamente increbráveis em duas linha mas a proprieda word-wrap: break-word, possibilita divila é mais linhas</p>
+
+    <h1>Word Break</h1>
+    <p>A proprieda word-break especifica como as quebras de linha devem, no caso nesse paragrafo as quebras estão ocorrendo corretamente</p>
+    <p>Mas nesse daqui as quebras estão um pouco bagunçadas por causa da propriedade word-break</p>
+
+    <h1>Writing Mode</h1>
+    <p>O writing-mode especifica como as linhas ficarão dispostas, as possibilidades são</p>
+    <p>horizontal</p>
+    <p>vertical</p>
+</body>
+</html>
